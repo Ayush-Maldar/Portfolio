@@ -159,34 +159,56 @@ section, .services, .Skill, .service, .portfolio {
   animation: fadeInUp 0.8s ease-in-out;
 }
 
-h2, h3 {
+h2 ,h3{
   text-align: center;
   color: var(--accent);
   margin-bottom: 30px;
   font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
+h4{
+  font-size: clamp(1rem, 1vw, 1rem);
+  color: cyan;
+  padding: 20px;
+}
+
 /* Services */
 .serve {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  text-align: center;
+  list-style: none;
 }
 
-.serve li {
-  background-color: var(--secondary);
-  padding: 20px;
+.service-card {
+  position: relative;
+  background-color: #1f2937; /* example color */
   border-radius: 12px;
-  font-weight: 500;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  padding: 20px;
+  text-align: center;
   cursor: pointer;
+  overflow: hidden;
 }
 
-.serve li:hover {
-  transform: translateY(-5px);
-  background-color: #334155;
+.service-card p {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #111827; /* example background */
+  padding: 20px;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.4s ease;
 }
+
+.service-card:hover p {
+  opacity: 1;
+  transform: translateY(20px);
+}
+
+
 
 /* Skills */
 .this {
@@ -217,10 +239,11 @@ h2, h3 {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12px);
   border-radius: 12px;
-  padding: 30px;
+  padding: 20px;
   color: #e0f2fe;
   box-shadow: 0 4px 12px rgba(25, 9, 246, 0.4);
   transition: transform 0.3s ease;
+  margin-bottom: 30px;
 }
 
 .proj:hover {
