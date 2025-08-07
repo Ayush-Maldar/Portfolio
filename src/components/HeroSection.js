@@ -12,7 +12,7 @@ const HeroSection = () => {
           <button className="hire-me" onClick={()=>{window.location.href="mailto:ayush.maldar.10@gmail.com?subject=Hire%20Me&body=Hi,%20I%20would%20like%20to%20hire%20you%20for"}}>Hire Me</button>
           <br/>
           <br/>
-          <a href='/pdf/AyushCV.pdf' download className='download-cv'>Download CV</a>
+          <a href={`${process.env.PUBLIC_URL}/pdf/Ayushcv.pdf`} download className='download-cv'>Download CV</a>
         </div>
       </div>
       <img src={process.env.PUBLIC_URL + "/images/profile.jpg"} className="profile-image"/>
