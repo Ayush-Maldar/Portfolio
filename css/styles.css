@@ -37,6 +37,16 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
+.resume{
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  background-color: var(--bg); /* Add this line */
+  position: relative;          /* Ensure it's isolated */
+  z-index: 1;
+  width: 600;
+  height: 100%;
+}
+
 .scroll-indicator {
   position: fixed;
   top: 0;
